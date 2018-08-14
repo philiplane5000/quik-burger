@@ -1,30 +1,32 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">EAT-DA-BURGER</h1>
-        <p class="lead">Eat a burger. Add a burger. Gorge Yourself. Have fun.</p>
-    </div>
-</div>
+<div class="container main-container">
 
-<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">EAT-DA-BURGER</h1>
+            <p class="lead">Eat a burger. Add a burger. Gorge Yourself.</p>
+        </div>
+    </div>
+
 
     <div class="row">
 
         <div class="col-lg-4">
             <div class="burger-box">
                 <h3>Uneaten Burgers</h3>
-                <ol>
+                <ol class="list-group">
                     {{#each burgers}} {{#unless devoured}}
-                    <li value={{id}}>
+                    <li class="list-group-item list-group-item-warning" value="{{id}}">
                         {{burger_name}}
                     </li>
                     {{/unless}} {{/each}}
                 </ol>
+
             </div>
         </div>
 
         <div class="col-lg-4">
-            <div class="burger-img-container">
-                <img src="/assets/img/burger-245W.png" class="rounded" alt="burger-on-display">
+            <div class="burger-img-container text-center">
+                <img src="/assets/img/burger-square-225W.png" class="rounded" alt="burger-on-display">
             </div>
         </div>
 
@@ -32,9 +34,9 @@
             <div class="burger-box">
                 <h3>Eaten Burgers</h3>
 
-                <ol>
+                <ol class="list-group">
                     {{#each burgers}} {{#if devoured}}
-                    <li value="{{id}}">
+                    <li class="list-group-item list-group-item-dark" value="{{id}}">
                         {{burger_name}}
                     </li>
                     {{/if}} {{/each}}
@@ -45,14 +47,11 @@
     </div>
 
     <div class="row">
-        <div class="col-6">
-            <form>
-                <div class="row">
-                    <div class="col">
-                        <label for="new-burger">Add a burger:</label>
-                        <input name="new-burger" type="text" class="form-control" id="new-burger" placeholder="Enter a burger you want to eat here">
-                    </div>
-                </div>
+        <div class="col-4 float-right">
+            <form class="burger-form mt-3">
+                <label for="new-burger">Add a burger:</label>
+                <input name="new-burger" type="text" class="form-control" id="new-burger" placeholder="Enter a burger you want to eat here">
+                <button type="submit" for="new-burger" class="btn btn-lg btn-info mt-3" id="sub-new">SUBMIT</button>
             </form>
         </div>
     </div>
