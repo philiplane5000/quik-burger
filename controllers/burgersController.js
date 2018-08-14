@@ -1,15 +1,16 @@
 const express = require("express");
 //IMPORTING BURGER TO ACCESS ALL DATABASE SPECIFIC FUNCTIONS
 const burger = require("../models/burger");
+//ESTABLISH ROUTER (EXPRESS 4.0) AND EXPORT ROUTER FOR SERVER.JS
 const router = express.Router();
 
 router.get("/", function (req, res) {
     burger.all(function (data) {
-        let dataObj = {
+        let hbsObj = {
             burgers: data
         };
-        console.log(dataObj);
-        res.render("index", dataObj);
+        console.log(hbsObj);
+        res.render("index", hbsObj);
     });
 });
 

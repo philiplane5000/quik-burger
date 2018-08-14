@@ -14,7 +14,7 @@ function printQuestionMarks(num) {
 const orm = {
     selectAll: function(table, cb) {
         let queryStr = "SELECT * FROM " + table + ";";
-        connecion.query(queryStr, function(err, result) {
+        connection.query(queryStr, function(err, result) {
             if(err) {
                 throw err;
             }
