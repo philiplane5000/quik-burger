@@ -14,14 +14,14 @@
             <div class="burger-box">
                 <h3>Uneaten Burgers</h3>
                 <hr>
-                <ol class="list-group">
+                <ul class="list-group">
                     {{#each burgers}} {{#unless devoured}}
                     <li class="list-group-item list-group-item-warning" value="{{id}}">
                         {{burger_name}}
                         <a href="#" class="devour-btn" data-id="{{id}}">Devour</a>
                     </li>
                     {{/unless}} {{/each}}
-                </ol>
+                </ul>
 
             </div>
         </div>
@@ -36,13 +36,13 @@
             <div class="burger-box">
                 <h3>Eaten Burgers</h3>
                 <hr>
-                <ol class="list-group">
+                <ul class="list-group">
                     {{#each burgers}} {{#if devoured}}
-                    <li class="list-group-item list-group-item-dark" value="{{id}}">
+                    <li class="list-group-item list-group-item-dark" data-id="{{id}}">
                         {{burger_name}}
                     </li>
                     {{/if}} {{/each}}
-                </ol>
+                </ul>
             </div>
         </div>
 
@@ -53,7 +53,7 @@
             <form class="burger-form mt-3">
                 <label for="new-burger">Add a burger:</label>
                 <input name="new-burger" type="text" class="form-control" id="new-burger" placeholder="Enter a burger you want to eat here">
-                <button type="submit" for="new-burger" class="btn btn-lg btn-info mt-3" id="sub-new">SUBMIT</button>
+                <button for="new-burger" class="btn btn-lg btn-info mt-3" id="sub-new">SUBMIT</button>
             </form>
         </div>
     </div>

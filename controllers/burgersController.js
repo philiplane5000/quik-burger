@@ -15,6 +15,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/add/burger", function (req, res) {
+    console.log("NEW BURGER NAME= " + req.body.burger_name);
     res.send("CREATE BURGER UNDER CONSTRUCTION");
 });
 
