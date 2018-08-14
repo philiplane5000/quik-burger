@@ -13,4 +13,17 @@ html, body {
     background: #fff;
     padding: 20px;
     min-height: 225px;
+    border-radius: 10px;
+}
+
+.devour-btn, .devour-btn:visited {
+    color: red;
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+}
+
+.devour-btn:hover, .devour-btn:active, .devour-btn:focus {
+    text-decoration: none;
+    color: darkred;
 }

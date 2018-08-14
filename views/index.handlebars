@@ -2,7 +2,7 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">EAT-DA-BURGER</h1>
+            <h1 class="display-4">Eat-Da-Burger</h1>
             <p class="lead">Eat a burger. Add a burger. Gorge Yourself.</p>
         </div>
     </div>
@@ -13,10 +13,12 @@
         <div class="col-lg-4">
             <div class="burger-box">
                 <h3>Uneaten Burgers</h3>
+                <hr>
                 <ol class="list-group">
                     {{#each burgers}} {{#unless devoured}}
                     <li class="list-group-item list-group-item-warning" value="{{id}}">
                         {{burger_name}}
+                        <a href="#" class="devour-btn" data-id="{{id}}">Devour</a>
                     </li>
                     {{/unless}} {{/each}}
                 </ol>
@@ -33,7 +35,7 @@
         <div class="col-lg-4">
             <div class="burger-box">
                 <h3>Eaten Burgers</h3>
-
+                <hr>
                 <ol class="list-group">
                     {{#each burgers}} {{#if devoured}}
                     <li class="list-group-item list-group-item-dark" value="{{id}}">
