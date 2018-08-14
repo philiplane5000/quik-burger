@@ -18,7 +18,7 @@
                     {{#each burgers}} {{#unless devoured}}
                     <li class="list-group-item list-group-item-warning" value="{{id}}">
                         {{burger_name}}
-                        <a href="#" class="devour-btn" data-id="{{id}}">Devour</a>
+                        <a href="#" class="devour-btn" data-id="{{id}}" data-attribute="{{burger_name}}" data-state="{{devoured}}">Devour</a>
                     </li>
                     {{/unless}} {{/each}}
                 </ul>

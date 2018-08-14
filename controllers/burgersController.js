@@ -15,11 +15,12 @@ router.get("/", function (req, res) {
 });
 
 router.post("/add/burger", function (req, res) {
-    console.log("NEW BURGER NAME= " + req.body.burger_name);
+    console.log("NEW BURGER NAME: " + req.body.burger_name);
     res.send("CREATE BURGER UNDER CONSTRUCTION");
 });
 
 router.put("/update/burger", function (req, res) {
+    console.log("DEVOUR BURGER: " + req.body.burger_name);
     res.send("UPDATE BURGER UNDER CONSTRUCTION");
 });
 
