@@ -15,4 +15,4 @@
 
 * The app communicates with a `mysql` database to fetch or store new burger data. The on screen buttons trigger get or post requests via `express` to fetch or update the appropriate burger data -- the response is rendered in the view appropriately.
 
-* `EAT-DA-BURGER` is running live on [Heroku](https://google.com) 
+* `EAT-DA-BURGER` is running live on [Heroku]("https://quiet-refuge-58626.herokuapp.com/") 
