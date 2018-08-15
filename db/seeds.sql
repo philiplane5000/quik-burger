@@ -9,10 +9,6 @@ INSERT INTO burgers (burger_name, devoured) VALUES (
 );
 
 INSERT INTO burgers (burger_name, devoured) VALUES (
-'Bøfsandwich', true
-);
-
-INSERT INTO burgers (burger_name, devoured) VALUES (
 'Royale With Cheese', true
 );
 
