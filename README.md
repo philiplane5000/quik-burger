@@ -1,14 +1,16 @@
 
 # Eat-Da-Burger
 
-* `EAT-DA-BURGER` is a restaurant app that lets visiting users input the names of burgers they'd like to eat, which are added to a menu titled "Uneaten".
+* `EAT-DA-BURGER` is a restaurant app that allows users to input the names of burgers they'd like to eat, which are added to a menu titled "Uneaten" and/or "devour" them.
 
-* `Each` burger appears dynamically on screen under the `Uneaten` menu list with a button, `Devour`.
+* Newly created `burgers` appear dynamically on screen under the `Uneaten` menu list.
 
-* `Devour` on click will send the burger over to the `Eaten` list.
+* Each `Uneaten` burger comes with a `Devour` button.
 
-## HOW
+* On click, `Devour` will send the burger over to the `Eaten` list.
 
-* The app communicates with a `mysql` database to store burger data. The on screen buttons trigger get or post requests via `express` to fetch or update the appropriate data and render the response on screen appropriately.
+### Summary
+
+* The app communicates with a `mysql` database to fetch or store new burger data. The on screen buttons trigger get or post requests via `express` to fetch or update the appropriate burger data -- the response is rendered in the view appropriately.
 
 * `EAT-DA-BURGER` is running live on [Heroku](https://google.com) 
