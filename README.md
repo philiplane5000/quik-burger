@@ -1,7 +1,9 @@
 
 # Eat-Da-Burger
 
-* `EAT-DA-BURGER` is a restaurant app that allows users to input the names of burgers they'd like to eat, which are added to a menu titled "Uneaten" and/or "devour" them.
+### About
+
+* `EAT-DA-BURGER` is a restaurant app that allows users to choose from existing or input the names of burgers they would like to order/eat.
 
 * Newly created `burgers` appear dynamically on screen under the `Uneaten` menu list.
 
