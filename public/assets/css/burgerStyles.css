@@ -28,13 +28,9 @@ html, body {
     margin-right: 10px;
 }
 
-.devour-btn:hover, .devour-btn:active, .devour-btn:focus {
-    text-decoration: none;
-    /* color: #FF0000; */
-}
-
 /* //BOOTSTRAP OVERRIDE STYLES:// */
 /******************************/
+
 .jumbotron {
     background-color: white !important;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -49,13 +45,10 @@ html, body {
     border-right: 5px solid #FF0000;
     border-left: 5px solid #FF0000;
     outline: 5px solid yellow;
-    /* border-left: 5px solid #1260A4; */
 }
 
 .display-3 {
-    /* font-family: 'Hanalei Fill', cursive; */
     font-family: 'Monoton', cursive;
-    /* font-family: 'Concert One', cursive; */
 }
 
 .col-lg-4 {
@@ -66,6 +59,7 @@ html, body {
     background-color: #4BA3F1;
     border-color: #4BA3F1;
 }
+
 #sub-new:hover, #sub-new:focus, #sub-new:active {
     background-color: #1260A4;
     border-color: #1260A4;

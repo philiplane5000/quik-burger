@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-    console.log('CONNECTED');
-    console.log('*********');
-
     $("#sub-new").on("click", function (event) {
 
         event.preventDefault();

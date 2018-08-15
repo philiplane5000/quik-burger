@@ -1,17 +1,7 @@
 const connection = require("../config/connection");
 
-//HELPER FUNCTIONS (not exported)
-//*******************************/
-
-function printQuestionMarks(num) {
-    let arr = [];
-
-    for (let i = 0; i < num; i++) {
-        arr.push("?");
-    }
-}
-
 const orm = {
+
     selectAll: function (table, cb) {
         let queryStr = "SELECT * FROM " + table + ";";
         connection.query(queryStr, function (err, results) {
@@ -21,7 +11,6 @@ const orm = {
             cb(results);
         });
     },
-    //WILL REWRITE THESE USING INTERPOLATION LATER:
     insertOne: function (table, newObj, cb) {
         let queryStr = `INSERT INTO ${table} SET ?`
         console.log(queryStr);
@@ -31,7 +20,6 @@ const orm = {
                 throw err;
             }
             cb(results);
-            // console.log(result);
         })
     },
     updateOne: function (table, id, cb) {
@@ -42,7 +30,7 @@ const orm = {
             cb(results)
           });
     }
+    
 }
 
-//EXPORTED TO MODEL -- BURGER.JS
 module.exports = orm;
