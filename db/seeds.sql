@@ -9,9 +9,9 @@ INSERT INTO burgers (burger_name, devoured) VALUES (
 );
 
 INSERT INTO burgers (burger_name, devoured) VALUES (
-'Zinger Burger', false
+'The Whopper', false
 );
 
 INSERT INTO burgers (burger_name, devoured) VALUES (
-'Filet-O-Fish', true
+'Fried Chicken Burger', false
 );

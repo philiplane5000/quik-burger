@@ -15,13 +15,26 @@ router.get("/", function (req, res) {
 });
 
 router.post("/add/burger", function (req, res) {
-    console.log("NEW BURGER NAME: " + req.body.burger_name);
-    res.send("CREATE BURGER UNDER CONSTRUCTION");
+
+    let newBurg = {
+        burger_name: req.body.burger_name,
+        devoured: false
+    }
+    burger.insert(newBurg, function(result) {
+        res.status(200);
+        res.json({ id: result.id });
+    });
+    // res.status(200).send("SUCCESS");
+
 });
 
 router.put("/update/burger", function (req, res) {
-    console.log("DEVOUR BURGER: " + req.body.burger_name);
-    res.send("UPDATE BURGER UNDER CONSTRUCTION");
+    console.log("DEVOUR BURGER WITH ID: " + req.body.id);
+    burger.update(req.body.id, function(result) {
+        res.status(200);
+        res.json({ id: result.id});
+    })
+
 });
 
 module.exports = router;

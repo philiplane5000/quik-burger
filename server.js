@@ -2,10 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = require("./controllers/burgersController");
 const exphbs  = require('express-handlebars');
+const app = express();
 
 let PORT = process.env.PORT || 8080;
 
-var app = express();
 
 //SERVING STATIC CONTENT FROM "PUBLIC" DIRECTORY
 app.use(express.static("public"));

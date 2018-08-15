@@ -15,10 +15,10 @@ $(document).ready(function () {
             url: "/add/burger",
             type: "POST",
             data: burgerData,
-            success: function () {
-                console.log("CREATED NEW BURGER");
+            success: function (data) {
+                console.log(`CREATED NEW BURGER WITH ID: ${data.id}`);
                 $("#new-burger").val("");
-                // location.reload();
+                location.reload();
             }
         })
 
@@ -44,7 +44,7 @@ $(document).ready(function () {
             data: devourBurger,
             success: function () {
                 console.log("BURGER DEVOURED");
-                // location.reload();
+                location.reload();
             }
 
         })

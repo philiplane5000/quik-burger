@@ -12,37 +12,35 @@ function printQuestionMarks(num) {
 }
 
 const orm = {
-    selectAll: function(table, cb) {
+    selectAll: function (table, cb) {
         let queryStr = "SELECT * FROM " + table + ";";
-        connection.query(queryStr, function(err, result) {
-            if(err) {
-                throw err;
-            }
-            cb(result);
-        });
-    },
-    //WILL REWRITE THESE USING INTERPOLATION LATER:
-    insertOne: function(table, columns, values, cb) {
-        let queryStr = "INSERT INTO " + table;
-        queryStr += " (";
-        queryStr += cols.toString();
-        queryStr += ") ";
-        queryStr += "VALUES (";
-        queryStr += printQuestionMarks(values.length);
-        queryStr += ") "
-
-        console.log(queryStr);
-
-        connection.query(queryStr, vals, function(err, result) {
+        connection.query(queryStr, function (err, results) {
             if (err) {
                 throw err;
             }
+            cb(results);
+        });
+    },
+    //WILL REWRITE THESE USING INTERPOLATION LATER:
+    insertOne: function (table, newObj, cb) {
+        let queryStr = `INSERT INTO ${table} SET ?`
+        console.log(queryStr);
 
-            cb(result);
+        connection.query(queryStr, newObj, function (err, results) {
+            if (err) {
+                throw err;
+            }
+            cb(results);
+            // console.log(result);
         })
     },
-    updateOne: function(table, objColVals, condition, cb) {
-        console.log('UPDATEONE FUNCTION CALLED WITHIN ORM.JS');
+    updateOne: function (table, id, cb) {
+        console.log('UPDATE-ONE FUNCTION CALLED WITHIN ORM.JS');
+
+        connection.query(`UPDATE ${table} SET devoured = true WHERE id = ?`, id, function (error, results, fields) {
+            if (error) throw error;
+            cb(results)
+          });
     }
 }
 
