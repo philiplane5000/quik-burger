@@ -13,6 +13,7 @@ html, body {
     padding: 20px;
     min-height: 225px;
     border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .devour-btn, .devour-btn:visited {
@@ -27,15 +28,38 @@ html, body {
     color: #FF0000;
 }
 
+#sub-new {
+    background-color: #4BA3F1;
+    border-color: #4BA3F1;
+}
+#sub-new:hover, #sub-new:focus, #sub-new:active {
+    background-color: #1260A4;
+    border-color: #1260A4;
+}
+
+/* //BOOTSTRAP OVERRIDE STYLES:// */
+/******************************/
+.jumbotron {
+    background-color: white;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
 .jumbotron-fluid {
     padding-right: 0;
     padding-left: 0;
     border-radius: 0;
-    border-bottom: 5px solid #1260A4;
-    border-right: 5px solid #1260A4;
-    border-left: 5px solid #1260A4;
+    border-bottom: 5px solid #FF0000;
+    border-right: 5px solid #FF0000;
+    border-left: 5px solid #FF0000;
+    /* border-left: 5px solid #1260A4; */
 }
 
-#sub-new {
-    background-color: #4BA3F1;
+.display-3 {
+    /* font-family: 'Hanalei Fill', cursive; */
+    font-family: 'Monoton', cursive;
+    /* font-family: 'Concert One', cursive; */
+}
+
+.col-lg-4 {
+    margin-top: 20px;
 }
