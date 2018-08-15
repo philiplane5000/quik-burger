@@ -5,13 +5,17 @@ INSERT INTO burgers (burger_name, devoured) VALUES (
 );
 
 INSERT INTO burgers (burger_name, devoured) VALUES (
-'Bacon Cheeseburger', true
+'Big Kahuna Burger', false
 );
 
 INSERT INTO burgers (burger_name, devoured) VALUES (
-'The Whopper', false
+'Bøfsandwich', true
 );
 
 INSERT INTO burgers (burger_name, devoured) VALUES (
-'Fried Chicken Burger', false
+'Royale With Cheese', true
+);
+
+INSERT INTO burgers (burger_name, devoured) VALUES (
+'Kiwilango', false
 );

@@ -2,7 +2,8 @@
 
     <div class="jumbotron jumbotron-fluid border-red">
         <div class="container">
-            <h1 class="display-3 text-center"><i class="fas fa-utensils fa-sm"></i> Eat-Da-Burger</h1>
+            <h1 class="display-3 text-center">
+                <i class="fas fa-utensils fa-sm"></i> Eat-Da-Burger</h1>
             <p class="lead text-center">Eat a burger. Add a burger. Gorge Yourself.</p>
         </div>
     </div>
@@ -18,7 +19,9 @@
                     {{#each burgers}} {{#unless devoured}}
                     <li class="list-group-item list-group-item-warning" value="{{id}}">
                         {{burger_name}}
-                        <a href="#" class="devour-btn" data-id="{{id}}" data-attribute="{{burger_name}}" data-state="{{devoured}}">Devour</a>
+                        <a href="#" class="devour-btn" data-id="{{id}}" data-attribute="{{burger_name}}" data-state="{{devoured}}">
+                        <button class="btn btn-sm btn-warning">Devour</button>
+                        </a>
                     </li>
                     {{/unless}} {{/each}}
                 </ul>
@@ -50,8 +53,10 @@
 
     <div class="row">
         <div class="col-5 float-right">
-            <form class="burger-form mt-3">
-                <label for="new-burger">Add a burger:</label>
+            <form class="burger-form mt-5 p-3 rounded">
+                <label for="new-burger">
+                    <h5>Add a Burger:</h5>
+                </label>
                 <input name="new-burger" type="text" class="form-control" id="new-burger" placeholder="Enter a burger you want to eat here">
                 <button for="new-burger" class="btn btn-lg btn-info mt-3" id="sub-new">SUBMIT</button>
             </form>
