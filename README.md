@@ -1,5 +1,5 @@
 
-# Eat-Da-Burger
+# QUIK-BURGER
 
 ### About
 
